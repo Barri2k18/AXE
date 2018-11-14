@@ -38,7 +38,7 @@ async def status_task():
         await asyncio.sleep(3)
         await bot.change_presence(game=discord.Game(name='in '+str(len(bot.servers))+' servers',type=1))
         await asyncio.sleep(3)
-        await bot.change_presence(game=discord.Game(name='with your mother 👹', type=1))
+        await bot.change_presence(game=discord.Game(name='with my emotes.', type=1))
         await asyncio.sleep(3)
         await bot.change_presence(game=discord.Game(name='Barry#0828', type=1))
         await asyncio.sleep(1)
@@ -46,20 +46,20 @@ async def status_task():
          # ------------ Oofy      
 
 #@bot.command(pass_context=True)
-async def send1(ctx):
-    area=ctx.message.channel
-    await bot.send_file(area, r"/storage/emulated/0/Android/Azone/BotPic/zone.png",filename="zone.png",content="")
+#async def send1(ctx): #--- Not Working Because: This bot isn't hosted with my phone.
+#    area=ctx.message.channel
+#    await bot.send_file(area, r"/storage/emulated/0/Android/Azone/BotPic/zone.png",filename="zone.png",content="")
     
 #@bot.command(pass_context=True)
-async def send2(ctx):
-    area=ctx.message.channel
-    await bot.send_file(area, r"/storage/emulated/0/Android/Azone/BotPic/zone1.png",filename="zone.png",content="")
+#async def send2(ctx): #--- Not Working Because: This bot isn't hosted with my phone.
+#    area=ctx.message.channel
+#    await bot.send_file(area, r"/storage/emulated/0/Android/Azone/BotPic/zone1.png",filename="zone.png",content="")
                
 
 #@bot.command(pass_context=True)
-async def send(ctx):
-    area=ctx.message.channel
-    await bot.send_file(area, r"/storage/emulated/0/Android/Azone/BotPic/friendzone.png",filename="™.png",content="")
+#async def send(ctx): #--- Not Working Because: This bot isn't hosted with my phone.
+#    area=ctx.message.channel
+#    await bot.send_file(area, r"/storage/emulated/0/Android/Azone/BotPic/friendzone.png",filename="™.png",content="")
     
 @bot.command(pass_context=True)
 async def bugreport(ctx, *, msg=None):
