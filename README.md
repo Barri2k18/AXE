@@ -3,4 +3,5 @@
 
 **Commands**
 
+# General
 `d!info` `Usage: -info`
