@@ -1,9 +1,12 @@
 # Zone Beta
 ```Zone Beta is Beta Version of the original bot.```
 
-**Commands**
 
-# General
+
+# Commands
+**General**
 `-info` `Usage: -info`
+
 `-avatar` `Usage: -avatar (user)`
+
 `-poll` `Usage: -poll "Question" "Option1" "Option 2" "Option3"`
