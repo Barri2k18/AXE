@@ -4,4 +4,6 @@
 **Commands**
 
 # General
-`d!info` `Usage: -info`
+`-info` `Usage: -info`
+`-avatar` `Usage: -avatar (user)`
+`-poll` `Usage: -poll "Question" "Option1" "Option 2" "Option3"`
