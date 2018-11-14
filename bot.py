@@ -80,10 +80,7 @@ async def bugreport(ctx, *, msg=None):
 @bot.command(pass_context=True)
 @commands.has_permissions(manage_roles=True)
 async def rules(ctx):
-	if ctx.message.author.id not in owner:
-		return
-	embed = discord.Embed(
-	colour = discord.Colour.orange())
+	embed = discord.Embed(colour = discord.Colour.orange())
 	embed.set_author(name="{}".format(ctx.message.server), icon_url=ctx.message.server.icon_url)
 	#embed.set_thumbnail(url=ctx.message.author.avatar_url)
 	embed.set_footer(text='{}'.format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
@@ -104,9 +101,7 @@ async def rules(ctx):
 
 @bot.command(pass_context = True)
 async def giveaways(ctx):
-	if ctx.message.author.id not in owner:
-		return
-	embed=discord.Embed(title=" ")
+	embed = discord.Embed(title=" ")
 	embed.set_author(name="Giveaways", icon_url="https://media.discordapp.net/attachments/511226306692775936/511960131169419264/612f3fc9dedfd368820b55c4cf259c07.png")
 	embed.add_field(name="What do we giveaway?", value="Usually Tatsumaki credits or pokemons or even roles.")
 	embed.add_field(name="How to host giveaways?", value="You can host giveaways and make requirements for the giveaway. After someone has won they must claim their price in 48 hours or less.", inline=True)
