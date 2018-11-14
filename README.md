@@ -6,20 +6,20 @@
 # Commands
 **General**
 
-`-info` `Usage: -info`
+`-info` `Usage: -info` `|`
 
-`-avatar` `Usage: -avatar (user)`
+`-avatar` `Usage: -avatar (user)` `|`
 
-`-poll` `Usage: -poll "Question" "Option1" "Option 2" "Option3"`
+`-poll` `Usage: -poll "Question" "Option1" "Option 2" "Option3"` `|`
 
 **Moderation**
 
-`-kick` `Usage: -kick (user)`
+`-kick` `Usage: -kick (user)` `|`
 
-`-ban` `Usage: -ban (user)`
+`-ban` `Usage: -ban (user)` `|`
 
-`-userinfo` `Usage: -userinfo (user)`
+`-userinfo` `Usage: -userinfo (user)` `|`
 
-`-serverinfo` `Usage: -serverinfo
+`-serverinfo` `Usage: -serverinfo` `|`
 
-`-makemod` `Usage: -makemod (user)` `Assigns moderator role`
+`-makemod` `Usage: -makemod (user)` `|` `Assigns moderator role`
