@@ -5,6 +5,7 @@
 
 # Commands
 **General**
+
 `-info` `Usage: -info`
 
 `-avatar` `Usage: -avatar (user)`
