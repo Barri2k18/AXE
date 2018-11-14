@@ -22,7 +22,7 @@ The bot is still in development so please expect maintenances/bot going down.
 
 `-serverinfo` `Usage: -serverinfo` `|` `Shows info about the server`
 
-`-makemod` `Usage: -makemod (user)` `|` `Assigns moderator role`
+`-makemod` `Usage: -makemod (user)` `|` `Assigns Moderator role`
 
 **Owner** 
 
