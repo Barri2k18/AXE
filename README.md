@@ -1,2 +1,5 @@
 # Zone Beta
-*Zone*
+```Zone Beta is Beta Version of the original bot.```
+
+**Commands**
+`d!info` `Usage: -info`
