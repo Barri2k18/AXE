@@ -28,7 +28,7 @@ bot.remove_command('help')
 server1 = bot.get_server(472829296940154901)
 
 #----- Extensions
-bot.load_extension('spoiler')
+#bot.load_extension('spoiler')
 
 async def status_task():
     while True:
