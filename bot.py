@@ -171,7 +171,7 @@ async def info(ctx):
     ) #-------------- Zone
     embed.set_author(name='{}`s Info'.format(bot.user.name), icon_url=bot.user.avatar_url)
     message = ctx.message
-    embed.add_field(name='Owners:', value='<:pepeLovesBrilliance:506934028407144448> `Barry#0828` & <:pepeLovesBalance:509774139322662930> `Nick#4671`', inline=False)
+    embed.add_field(name='Owners:', value='<:owner:511828594394398722> `Barry#0828` & <:owner:511828594394398722> `Nick#4671`', inline=False)
     embed.add_field(name='Library:', value='<:py:511826873374736414> discord.py', inline=False)
     embed.add_field(name='Servers:', value='{}'.format(len(bot.servers)), inline=True)
     embed.add_field(name='Users:', value='{}'.format((len(set(bot.get_all_members())))), inline= True)
