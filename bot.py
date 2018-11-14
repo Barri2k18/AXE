@@ -80,6 +80,7 @@ async def bugreport(ctx, *, msg=None):
 @bot.command(pass_context=True)
 @commands.has_permissions(manage_roles=True)
 async def rules(ctx):
+	if ctx.message.author.id not in owner:
 	embed = discord.Embed(
 	colour = discord.Colour.red())
 	embed.set_author(name="{}".format(ctx.message.server), icon_url=ctx.message.server.icon_url)
@@ -102,6 +103,7 @@ async def rules(ctx):
 
 @bot.command(pass_context = True)
 async def giveaways(ctx):
+	if ctx.message.author.id not in owner:
 	embed=discord.Embed(title=" ")
 	embed.set_author(name="Giveaways", icon_url="https://media.discordapp.net/attachments/511226306692775936/511960131169419264/612f3fc9dedfd368820b55c4cf259c07.png")
 	embed.add_field(name="What do we giveaway?", value="Usually Tatsumaki credits or pokemons or even roles.")
