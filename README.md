@@ -6,7 +6,7 @@
 # Commands
 **General**
 
-`-info` `Usage: -info` `|` `Shows info abput the bot
+`-info` `Usage: -info` `|` `Shows info about the bot`
 
 `-avatar` `Usage: -avatar (user)` `|` `Shows avatar of someone`
 
