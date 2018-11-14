@@ -23,3 +23,11 @@
 `-serverinfo` `Usage: -serverinfo` `|` `Shows info about the server`
 
 `-makemod` `Usage: -makemod (user)` `|` `Assigns moderator role`
+
+**Owner** 
+
+`-setgame` `Usage: -setgame (game)` `|` `Owner only`
+
+`-setname` `Usage: -setname (name)` `|` `Owner only`
+
+`-setavatar` `Usage: -setavatar (link)` `|` `Owner only`
