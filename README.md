@@ -1,7 +1,7 @@
 # Zone Beta
 ```Zone Beta is Beta Version of the original bot.```
 
-
+The bot is still in development so please expect maintenances/bot going down.
 
 # Commands
 **General**
