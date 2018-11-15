@@ -1,4 +1,4 @@
-![logo](https://cdn.discordapp.com/attachments/500008372439875594/512571588424499210/20181115_121416.png)
+![logo](https://cdn.discordapp.com/attachments/511228031008768002/512572063735742474/20181115_121808.png)
 
 
 # Zone Beta
