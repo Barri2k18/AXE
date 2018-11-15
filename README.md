@@ -1,6 +1,6 @@
 ![logo](https://cdn.discordapp.com/attachments/511228031008768002/512572063735742474/20181115_121808.png)
 
-class="label label-default">New</span></h6>
+class="label label-default">N
 
 # Zone Beta
 ```Zone Beta is Beta Version of the original bot.```
