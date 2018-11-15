@@ -1,3 +1,6 @@
+![logo](https://image.prntscr.com/image/rcFKFC4xSXGIz-tRqtYnXA.png)
+
+
 # Zone Beta
 ```Zone Beta is Beta Version of the original bot.```
 
