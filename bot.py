@@ -359,13 +359,14 @@ async def serverinfo(ctx):
  
  #---- Misc
 	
-@bot.command(pass_context=True, no_pm=True)
+@bot.command(pass_context=True)
 async def avatar(ctx, member: discord.Member):
-	embed = discord.Embed(
-		colour = discord.Colour.orange(),title="{}'s avatar".format(ctx.message.author.name)
-		embed.set_image(url=ctx.message.user.avatar_url)
-		await bot.say(embed=embed)
-		await bot.delete_message(ctx.message) # --------------------- EMBED ONE
+	time = datetime.datetime.utcnow()
+	embed = discord.Embed(title="{}'s avatar".format(member.name), url=member.avatar_url)
+	embed.set_image(url=member.avatar_url)
+	embed.set_footer(text='Requested by {}'.format(ctx.message.author, ctx.message.timestamp), icon_url=ctx.message.author.avatar_url)
+	await bot.delete_message(ctx.message)
+	await bot.say(embed=embed) # ----------------------------------- EMBED ONE
  
 #@bot.command(pass_context=True, no_pm=True)
 #async def avatar(ctx, member: discord.Member):
