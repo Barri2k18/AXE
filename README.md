@@ -1,12 +1,5 @@
-![logo](https://cdn.discordapp.com/attachments/511228031008768002/512572063735742474/20181115_121808.png)
-<div align="center">
+![logo](https://images-ext-2.discordapp.net/external/UWczcZgLKhl51Exka3_LB768n05kRH6j3FnIhGVuSOA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/366579653395349505/97a790482122fc48175816e8bfd5dbdc.webp?width=375&height=375)
 
-	<p> 
-
-		<a href="https://discord.gg/2B4UvKx"><img src="https://discordapp.com/api/guilds/376697605029101569/widget.png?style=banner2" alt="" /></a>
-
-	</p>
-	
 # Zone Beta
 ```Zone Beta is Beta Version of the original bot.```
 
