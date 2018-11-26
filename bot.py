@@ -165,7 +165,7 @@ async def help(ctx):
 @bot.command(pass_context=True)
 async def testc(ctx):
 	user = discord.Member
-	embed=discord.Embed(title="Add Charlie", url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", description=" ", color=0xcf38ef)
+	embed=discord.Embed(title="Add Charlie", url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", description="...", color=0xcf38ef)
 	embed.set_author(name=bot.user.name, url="http://example.com", icon_url=bot.user.avatar_url)
 	embed.set_thumbnail(url=bot.user.avatar_url)
 	embed.add_field(name="miss me with that gay shit", value="-elon musk 2025", inline=True)
