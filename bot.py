@@ -180,7 +180,7 @@ async def info(ctx):
     embed = discord.Embed(
     colour = discord.Colour.orange()
     ) #-------------- Zone
-    embed.set_author(name='{}`s Info'.format(bot.user.name), icon_url=bot.user.avatar_url)
+    embed.set_author(name="{}'s Info".format(bot.user.name), icon_url=bot.user.avatar_url)
     message = ctx.message
     embed.add_field(name='Owners:', value='<:owner:511828594394398722> `Barry#0828` & <:owner:511828594394398722> `Nick#4671`', inline=False)
     embed.add_field(name='Library:', value='<:py:511826873374736414> discord.py', inline=False)
@@ -190,7 +190,7 @@ async def info(ctx):
     embed.add_field(name='Website:', value='[Coming Soon!](https://www.google.com)', inline=True)
     embed.set_footer(text ='{}'.format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
     await bot.say(embed=embed)
-    await bot.add_reaction(message, emoji= "✅")
+    await bot.add_reaction(message, emoji= <:typing:513766585756811267:>)
     await asyncio.sleep(2)
     await bot.delete_message(ctx.message)
 
