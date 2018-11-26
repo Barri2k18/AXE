@@ -163,13 +163,13 @@ async def help(ctx):
 
 
 @bot.command(pass_context=True)
-async def testc(ctx):
+async def information(ctx):
 	user = discord.Member
 	embed=discord.Embed(title="Add Charlie", url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", description="...", color=0xcf38ef)
 	embed.set_author(name=bot.user.name, url="http://example.com", icon_url=bot.user.avatar_url)
 	embed.set_thumbnail(url=bot.user.avatar_url)
 	embed.add_field(name="miss me with that gay shit", value="-elon musk 2025", inline=True)
-	embed.set_footer(text="ples no normes allowed")
+	embed.set_footer(text="Requested by {}".format(ctx.message.author.name), icon_url=ctx.message.author.avatar_url)
 	await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
