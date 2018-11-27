@@ -190,7 +190,7 @@ async def info(ctx):
     embed.add_field(name='Website:', value='[Coming Soon!](https://www.google.com)', inline=True)
     embed.set_footer(text ='{}'.format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
     await bot.say(embed=embed)
-    await bot.add_reaction(message, emoji= <:typing:513766585756811267:>)
+    await bot.add_reaction(message, emoji="🙈")
     await asyncio.sleep(2)
     await bot.delete_message(ctx.message)
 
