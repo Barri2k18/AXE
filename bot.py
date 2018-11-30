@@ -161,7 +161,7 @@ async def help(ctx):
 async def mhelp(ctx):
 	user = discord.Member
 	embed=discord.Embed(colour = discord.Colour.red())
-	embed.set_author(text="Moderation",url="", icon_url=bot.user.avatar_url)
+	embed.set_author(text="Moderation",url="ttps://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", icon_url=bot.user.avatar_url)
 	embed.set_thumbnail(url=bot.user.avatar_url)
 	embed.add_field(name="Moderation", value="`kick`, `ban`", inline=True)
 	embed.add_field(name="Misc", value="`userinfo`, `serverinfo`", inline=True)
