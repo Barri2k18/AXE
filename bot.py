@@ -160,7 +160,7 @@ async def help(ctx):
 @bot.command(pass_context=True)
 async def mhelp(ctx):
 	user = discord.Member
-	embed=discord.Embed(color=544F4F)
+	embed=discord.Embed(colour = discord.Colour.red())
 	embed.set_author(text="Moderation",url="", icon_url=bot.user.avatar_url)
 	embed.set_thumbnail(url=bot.user.avatar_url)
 	embed.add_field(name="Moderation", value="`kick`, `ban`", inline=True)
