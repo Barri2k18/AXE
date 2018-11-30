@@ -147,8 +147,8 @@ def is_owner(ctx):
     
 @bot.command(pass_context=True)
 async def help(ctx):
-    author = ctx.message.author
-    message = ctx.message
+	author = ctx.message.author
+	message = ctx.message
 	embed = discord.Embed(colour = discord.Colour.orange())
 	embed.set_author(name='Help Menu', icon_url='https://cdn.discordapp.com/attachments/366584787902922752/508926666622369805/8471_PepeHalloween.gif')
 	embed.add_field(name='cmhelp', value='for moderation commands', inline=False)
