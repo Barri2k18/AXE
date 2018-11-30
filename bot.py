@@ -157,29 +157,28 @@ async def help(ctx):
 	await bot.send_message(author, embed=embed)
 	await bot.delete_message(ctx.message)
 	
-@bot.command(pass_context=True)
-async def mhelp(ctx):
-	user = discord.Member
-	embed=discord.Embed(colour = discord.Colour.red())
-	embed.set_author(text="Moderation",url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", icon_url=bot.user.avatar_url)
-	embed.set_thumbnail(url=bot.user.avatar_url)
-	embed.add_field(name="Moderation", value="`kick`, `ban`", inline=True)
-	embed.add_field(name="Misc", value="`userinfo`, `serverinfo`", inline=True)
-	embed.set_footer(text="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
-	await bot.say(embed=embed)
+#@bot.command(pass_context=True)
+#async def mhelp(ctx):
+#	embed=discord.Embed(colour = discord.Colour.red())
+#	embed.set_author(text="Moderation",url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", icon_url=bot.user.avatar_url)
+#	embed.set_thumbnail(url=bot.user.avatar_url)
+#	embed.add_field(name="Moderation", value="`kick`, `ban`", inline=True)
+#	embed.add_field(name="Misc", value="`userinfo`, `serverinfo`", inline=True)
+#	embed.set_footer(text="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
+#	await bot.say(embed=embed)
 
 
-@bot.command(pass_context=True)
-async def ghelp(ctx):
-	user = discord.Member
-	embed=discord.Embed(title="Add Charlie", url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", color=544F4F)
-	embed.set_author(name="Help", url="http://example.com", icon_url=bot.user.avatar_url)
-	embed.set_thumbnail(url=bot.user.avatar_url)
-	embed.add_field(name="General", value="`avatar`, `poll`", inline=True)
-	embed.add_field(name="Bot", value="`info`", inline=True)
-	embed.add_field(name="Owner", value="`setname`, `setgame`, `setavatar`", inline=True)
-	embed.set_footer(text="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
-	await bot.say(embed=embed)
+#@bot.command(pass_context=True)
+#async def ghelp(ctx):
+#	user = discord.Member
+#	embed=discord.Embed(title="Add Charlie", url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", color=544F4F)
+#	embed.set_author(name="Help", url="http://example.com", icon_url=bot.user.avatar_url)
+#	embed.set_thumbnail(url=bot.user.avatar_url)
+#	embed.add_field(name="General", value="`avatar`, `poll`", inline=True)
+#	embed.add_field(name="Bot", value="`info`", inline=True)
+#	embed.add_field(name="Owner", value="`setname`, `setgame`, `setavatar`", inline=True)
+#	embed.set_footer(text="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
+#	await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
 async def info(ctx):
