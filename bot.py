@@ -149,20 +149,16 @@ def is_owner(ctx):
 async def help(ctx):
     author = ctx.message.author
     message = ctx.message
-    
-    embed = discord.Embed(
-    colour = discord.Colour.orange()
-    )
-    embed.set_author(name='Help Menu', icon_url='https://cdn.discordapp.com/attachments/366584787902922752/508926666622369805/8471_PepeHalloween.gif')
-    embed.add_field(name='Moderation', value='d!modhelp', inline=False)
-    embed.add_field(name='Owner', value='d!ownerhelp', inline=False)
-    embed.add_field(name='General', value='d!generalhelp', inline=False)
-    embed.set_footer(text ='Prefix: d!, -, ,')
-    await bot.send_message(author, embed=embed)
-    await bot.delete_message(ctx.message)
+	embed = discord.Embed(colour = discord.Colour.orange())
+	embed.set_author(name='Help Menu', icon_url='https://cdn.discordapp.com/attachments/366584787902922752/508926666622369805/8471_PepeHalloween.gif')
+	embed.add_field(name='cmhelp', value='for moderation commands', inline=False)
+	embed.add_field(name='cghelp', value='for general commands', inline=False)
+	embed.set_footer(text ='Prefix: c', icon_url=bot.user.avatar_url)
+	await bot.send_message(author, embed=embed)
+	await bot.delete_message(ctx.message)
 
 @bot.command(pass_context=True)
-async def @help(ctx):
+async def mhelp(ctx):
 	user = discord.Member
 	embed=discord.Embed(color=544F4F)
 	embed.set_author(text="Moderation",url="", icon_url=bot.user.avatar_url)
@@ -174,7 +170,7 @@ async def @help(ctx):
 
 
 @bot.command(pass_context=True)
-async def !help(ctx):
+async def ghelp(ctx):
 	user = discord.Member
 	embed=discord.Embed(title="Add Charlie", url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", color=544F4F)
 	embed.set_author(name=bot.user.name, url="http://example.com", icon_url=bot.user.avatar_url)
