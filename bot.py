@@ -169,7 +169,7 @@ async def information(ctx):
 	embed.set_author(name=bot.user.name, url="http://example.com", icon_url=bot.user.avatar_url)
 	embed.set_thumbnail(url=bot.user.avatar_url)
 	embed.add_field(name="miss me with that gay shit", value="-elon musk 2025", inline=True)
-	embed.set_footer(text="Requested by {}".format(user.name), icon_url=user.avatar_url)
+	embed.set_footer(text="Requested by {}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
