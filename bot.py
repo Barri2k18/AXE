@@ -18,7 +18,7 @@ from discord import Game, Embed, Color, Status, ChannelType
 owner = ["362672438699622403"]
 developer = ["362672438699622403"]
 
-BOT_PREFIX = ("-", "d!", "366579653395349505", "<@366579653395349505>", ",")
+BOT_PREFIX = ("c", "C", "366579653395349505", "<@366579653395349505>")
 
 #timestamp=datetime.datetime.utcfromtimestamp(1541415948)
 
@@ -161,15 +161,28 @@ async def help(ctx):
     await bot.send_message(author, embed=embed)
     await bot.delete_message(ctx.message)
 
+@bot.command(pass_context=True)
+async def @help(ctx):
+	user = discord.Member
+	embed=discord.Embed(color=544F4F)
+	embed.set_author(text="Moderation",url="", icon_url=bot.user.avatar_url)
+	embed.set_thumbnail(url=bot.user.avatar_url)
+	embed.add_field(name="Moderation", value="`kick`, `ban`", inline=True)
+	embed.add_field(name="Misc", value="`userinfo`, `serverinfo`", inline=True)
+	embed.set_footer(text="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
+	await bot.say(embed=embed)
+
 
 @bot.command(pass_context=True)
-async def information(ctx):
+async def !help(ctx):
 	user = discord.Member
-	embed=discord.Embed(title="Add Charlie", url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", description="...", color=0xcf38ef)
+	embed=discord.Embed(title="Add Charlie", url="https://discordapp.com/api/oauth2/authorize?client_id=366579653395349505&permissions=2146827511&scope=bot", color=544F4F)
 	embed.set_author(name=bot.user.name, url="http://example.com", icon_url=bot.user.avatar_url)
 	embed.set_thumbnail(url=bot.user.avatar_url)
-	embed.add_field(name="miss me with that gay shit", value="-elon musk 2025", inline=True)
-	embed.set_footer(text="Requested by {}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
+	embed.add_field(name="General", value="`avatar`, `poll`", inline=True)
+	embed.add_field(name="Bot", value="`info`", inline=True)
+	embed.add_field(name="Owner", value="`setname`, `setgame`, `setavatar`", inline=True)
+	embed.set_footer(text="{}".format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	await bot.say(embed=embed)
 
 @bot.command(pass_context=True)
@@ -182,7 +195,7 @@ async def info(ctx):
     ) #-------------- Zone
     embed.set_author(name="{}'s Info".format(bot.user.name), icon_url=bot.user.avatar_url)
     message = ctx.message
-    embed.add_field(name='Owners:', value='<:owner:511828594394398722> `Barry#0828` & <:owner:511828594394398722> `Nick#4671`', inline=False)
+    embed.add_field(name='Owners:', value='Barry`#0828` & Nick`#4671`', inline=False)
     embed.add_field(name='Library:', value='<:py:511826873374736414> discord.py', inline=False)
     embed.add_field(name='Servers:', value='{}'.format(len(bot.servers)), inline=True)
     embed.add_field(name='Users:', value='{}'.format((len(set(bot.get_all_members())))), inline= True)
@@ -439,56 +452,55 @@ async def poll(ctx, question, *options: str):
 
 
 #--- HELP Commands
-@bot.command(pass_context = True)
-async def modhelp(ctx):
-    author = ctx.message.author
-    message = ctx.message
-    embed = discord.Embed(
-    colour = discord.Colour.orange()
-    )
-    embed.set_author(name='Moderation', icon_url='https://cdn.discordapp.com/attachments/366584787902922752/508926667146919946/5311_BlobKnight_2.gif')
-    embed.add_field(name = 'd!kick',value ='Use it like ``d!kick (user)``',inline = False)
-    embed.add_field(name = 'd!ban',value ='Use it like ``d!ban (user)``',inline = False)
-    embed.add_field(name = 'd!userinfo',value ='Use it like ``d!userinfo (user)``',inline = False)
-    embed.add_field(name = 'd!serverinfo',value ='Use it like ``d!serverinfo``',inline = False)
-    embed.add_field(name = 'd!makemod',value ='Use it like ``d!makemod (user)``(Assigns Moderator role)',inline = False)
-    embed.add_field(name = 'd!setnick',value ='Use it like ``d!setnick (user) (new name)``',inline = False)
-    embed.set_footer(text ='{}'.format(message.timestamp))
-    await bot.send_message(author,embed=embed)
-    await bot.say('<:enveloping:511846521478840320> Check DMs For Information', delete_after=5)
-    await bot.delete_message(ctx.message)
+#@bot.command(pass_context = True)
+#async def modhelp(ctx):
+ #   author = ctx.message.author
+ #   message = ctx.message
+ #   embed = discord.Embed(
+ #   colour = discord.Colour.orange()
+  #  )
+ #   embed.set_author(name='Moderation', icon_url='https://cdn.discordapp.com/attachments/366584787902922752/508926667146919946/5311_BlobKnight_2.gif')
+ #   embed.add_field(name = 'd!kick',value ='Use it like ``d!kick (user)``',inline = False)
+  #  embed.add_field(name = 'd!ban',value ='Use it like ``d!ban (user)``',inline = False)
+#    embed.add_field(name = 'd!userinfo',value ='Use it like ``d!userinfo (user)``',inline = False)
+  #  embed.add_field(name = 'd!makemod',value ='Use it like ``d!makemod (user)``(Assigns Moderator role)',inline = False)
+ #   embed.add_field(name = 'd!setnick',value ='Use it like ``d!setnick (user) (new name)``',inline = False)
+ #   embed.set_footer(text ='{}'.format(message.timestamp))
+ #   await bot.send_message(author,embed=embed)
+ #   await bot.say('<:enveloping:511846521478840320> Check DMs For Information', delete_after=5)
+ #   await bot.delete_message(ctx.message)
    
-@bot.command(pass_context = True)
-async def ownerhelp(ctx):
-    author = ctx.message.author
-    message = ctx.message
-    r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
-    embed.set_author(name='Owner', icon_url='https://cdn.discordapp.com/attachments/366584787902922752/508926667146919946/5311_BlobKnight_2.gif')
-    embed.add_field(name = 'd!setname',value ='Use it like ``d!setname (name)``',inline = False)
-    embed.add_field(name = 'd!setgame',value ='Use it like ``d!setgame (game)``',inline = False)
-    embed.add_field(name = 'd!setavatar',value ='Use it like ``d!setavatar (url)``',inline = False)
-    embed.set_footer(text ='{}'.format(message.timestamp))
-    await bot.send_message(author,embed=embed)
-    await bot.say('<:enveloping:511846521478840320> Check DMs For Information', delete_after=5)
-    await bot.delete_message(ctx.message)
+#@bot.command(pass_context = True)
+#async def ownerhelp(ctx):
+ #   author = ctx.message.author
+#    message = ctx.message
+ #   r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+#    embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+#    embed.set_author(name='Owner', icon_url='https://cdn.discordapp.com/attachments/366584787902922752/508926667146919946/5311_BlobKnight_2.gif')
+#    embed.add_field(name = 'd!setname',value ='Use it like ``d!setname (name)``',inline = False)
+ #   embed.add_field(name = 'd!setgame',value ='Use it like ``d!setgame (game)``',inline = False)
+#    embed.add_field(name = 'd!setavatar',value ='Use it like ``d!setavatar (url)``',inline = False)
+#    embed.set_footer(text ='{}'.format(message.timestamp))
+#    await bot.send_message(author,embed=embed)
+#    await bot.say('<:enveloping:511846521478840320> Check DMs For Information', delete_after=5)
+#    await bot.delete_message(ctx.message)
   
-
-@bot.command(pass_context = True)
-async def generalhelp(ctx):
-    author = ctx.message.author
-    message = ctx.message
-    r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
-    embed.set_author(name='General', icon_url='https://cdn.discordapp.com/attachments/366584787902922752/508927292542550016/2284_PepoSalute.gif')
-    embed.add_field(name = 'd!info',value ='Use it like ``d!info``',inline = False)
-    embed.add_field(name = 'd!avatar',value ='Use it like ``d!avatar (user)``',inline = False)
-    embed.add_field(name = 'd!partners',value ='Use it like ``d!partners``',inline = False)
-    embed.add_field(name = 'd!poll',value ='Use it like ``d!poll "Question" "Option1" "Option2" ..... "Option9"``',inline = False)
-    embed.set_footer(text ='{}'.format(message.timestamp))
-    await bot.send_message(author,embed=embed)
-    await bot.say('<:enveloping:511846521478840320> Check DMs For Information', delete_after=5)
-    await bot.delete_message(ctx.message)
+#
+#@bot.command(pass_context = True)
+#async def generalhelp(ctx):
+#    author = ctx.message.author
+#    message = ctx.message
+#    r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
+#    embed = discord.Embed(color = discord.Color((r << 16) + (g << 8) + b))
+#    embed.set_author(name='General', icon_url='https://cdn.discordapp.com/attachments/366584787902922752/508927292542550016/2284_PepoSalute.gif')
+#    embed.add_field(name = 'd!info',value ='Use it like ``d!info``',inline = False)
+#    embed.add_field(name = 'd!avatar',value ='Use it like ``d!avatar (user)``',inline = False)
+#    embed.add_field(name = 'd!partners',value ='Use it like ``d!partners``',inline = False)
+#    embed.add_field(name = 'd!poll',value ='Use it like ``d!poll "Question" "Option1" "Option2" ..... "Option9"``',inline = False)
+#    embed.set_footer(text ='{}'.format(message.timestamp))
+#    await bot.send_message(author,embed=embed)
+#    await bot.say('<:enveloping:511846521478840320> Check DMs For Information', delete_after=5)
+#    await bot.delete_message(ctx.message)
 
 
 #oofoofoofoofoofoofoofoof
