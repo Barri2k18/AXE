@@ -374,7 +374,7 @@ async def serverinfo(ctx):
 async def avatar(ctx, member: discord.Member):
 	embed = discord.Embed(title="{}'s avatar".format(member.name), url=member.avatar_url)
 	embed.set_image(url=member.avatar_url)
-	embed.set_footer(text='Requested by {}'.format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
+	embed.set_footer(text='{}'.format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	await bot.delete_message(ctx.message)
 	await bot.say(embed=embed) # ----------------------------------- EMBED ONE
  
