@@ -18,7 +18,7 @@ from discord import Game, Embed, Color, Status, ChannelType
 owner = ["362672438699622403"]
 developer = ["362672438699622403"]
 
-BOT_PREFIX = ("c", "C", "366579653395349505", "<@366579653395349505>")
+BOT_PREFIX = ("axe", "a!", "ax", "366579653395349505", "<@366579653395349505>")
 
 #timestamp=datetime.datetime.utcfromtimestamp(1541415948)
 
@@ -81,7 +81,7 @@ async def bugreport(ctx, *, msg=None):
 @commands.has_permissions(manage_roles=True)
 async def rules(ctx):
 	embed = discord.Embed(colour = discord.Colour.orange())
-	embed.set_author(name="{}".format(ctx.message.server), icon_url=ctx.message.server.icon_url)
+	embed.set_author(name="Rules", icon_url=ctx.message.server.icon_url)
 	#embed.set_thumbnail(url=ctx.message.author.avatar_url)
 	embed.set_footer(text='{}'.format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	embed.add_field(name="1. Don't spam in any channels.", value='You will be muted immediately.')
