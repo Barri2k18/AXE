@@ -84,8 +84,9 @@ async def rules(ctx):
 @bot.command(pass_context = True)
 @commands.has_permissions(administrator=True) 
 async def test123(ctx):
+	user = disord.Member
 	embed = discord.Embed(title=" ")
-	embed.set_author(name="Commands", icon_url="https://discordemoji.com/assets/emoji/angeryping.gif")
+	embed.set_author(name="Commands", icon_url=bot.user.avatar_url)
 	embed.add_field(name="General", value="`avatar`, `userinfo`, `serverinfo`, `poll`, `info`", inline=False)
 	embed.add_field(name="Moderation", value="`kick`, `ban`, `mute`, `unmute`", inline=False)
 	embed.set_footer(text="{}".format(ctx.message.server), icon_url=ctx.message.author.avatar_url)
