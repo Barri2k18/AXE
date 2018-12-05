@@ -85,8 +85,8 @@ async def rules(ctx):
 @commands.has_permissions(administrator=True) 
 async def test123(ctx):
 	embed = discord.Embed(title=" ")
-	embed.set_author(name="#at-everyone", icon_url="https://discordemoji.com/assets/emoji/angeryping.gif")
-	embed.add_field(name="Why ping pongs?", value="There is not always pinging `@everyone`, we only ping `@everyone` if we need to.")
+	embed.set_author(name="Commands", icon_url="https://discordemoji.com/assets/emoji/angeryping.gif")
+	embed.add_field(name="General", value=" ")
 	embed.set_footer(text="Ping Pong?", icon_url=ctx.message.author.avatar_url)
 	await bot.say(embed=embed)
 	
