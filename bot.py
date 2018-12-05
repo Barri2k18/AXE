@@ -32,15 +32,13 @@ server1 = bot.get_server(472829296940154901)
 
 async def status_task():
     while True:
-        await bot.change_presence(game=discord.Game(name='for -help', type=1))
+        await bot.change_presence(game=discord.Game(name='for axhelp', type=1))
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name='with '+str(len(set(bot.get_all_members())))+' users', type=1))
         await asyncio.sleep(3)
-        await bot.change_presence(game=discord.Game(name='in '+str(len(bot.servers))+' servers',type=1))
+        await bot.change_presence(game=discord.Game(name='Begone', type=1))
         await asyncio.sleep(3)
-        await bot.change_presence(game=discord.Game(name='with my emotes.', type=1))
-        await asyncio.sleep(3)
-        await bot.change_presence(game=discord.Game(name='Barry#0828', type=1))
+        await bot.change_presence(game=discord.Game(name='Thot', type=1))
         await asyncio.sleep(1)
      
          # ------------ Oofy      
@@ -60,28 +58,12 @@ async def status_task():
 #async def send(ctx): #--- Not Working Because: This bot isn't hosted with my phone.
 #    area=ctx.message.channel
 #    await bot.send_file(area, r"/storage/emulated/0/Android/Azone/BotPic/friendzone.png",filename="™.png",content="")
-    
-@bot.command(pass_context=True)
-async def bugreport(ctx, *, msg=None):
-    channel = discord.utils.get(bot.get_all_channels(), server__name='FriendZone', name='bug-reports')
-    message = ctx.message
-    r, g, b = tuple(int(x * 255) for x in colorsys.hsv_to_rgb(random.random(), 1, 1))
-    color = discord.Color((r << 16) + (g << 8) + b)
-    if not msg:
-       await bot.say("<@{}> Please specify a message to send".format(ctx.message.author.id), delete_after=10)
-       await bot.delete_message(ctx.message)
-    else:
-        await bot.send_message(channel, embed=discord.Embed(color=color, description=msg + '\n Message From ~ ' + ctx.message.author.id))
-        await bot.delete_message(ctx.message)
-        await asyncio.sleep(1)
-        await bot.say("Message sent", delete_after=3)
-    return
 # ---
 @bot.command(pass_context=True)
 @commands.has_permissions(manage_roles=True)
 async def rules(ctx):
 	embed = discord.Embed(colour = discord.Colour.orange())
-	embed.set_author(name="Rules", icon_url=ctx.message.server.icon_url)
+	embed.set_author(name="Rules")
 	#embed.set_thumbnail(url=ctx.message.author.avatar_url)
 	embed.set_footer(text='{}'.format(ctx.message.author), icon_url=ctx.message.author.avatar_url)
 	embed.add_field(name="1. Don't spam in any channels.", value='You will be muted immediately.')
@@ -100,13 +82,12 @@ async def rules(ctx):
 	await bot.delete_nessage(ctx.message)
 
 @bot.command(pass_context = True)
-async def giveaways(ctx):
+@commands.has_permissions(administrator=True) 
+async def test123(ctx):
 	embed = discord.Embed(title=" ")
-	embed.set_author(name="Giveaways", icon_url="https://media.discordapp.net/attachments/511226306692775936/511960131169419264/612f3fc9dedfd368820b55c4cf259c07.png")
-	embed.add_field(name="What do we giveaway?", value="Usually Tatsumaki credits or pokemons or even roles.")
-	embed.add_field(name="How to host giveaways?", value="You can host giveaways and make requirements for the giveaway. After someone has won they must claim their price in 48 hours or less.", inline=True)
-	embed.add_field(name="What if i use alts?", value="The giveaway will be rerolled and ban incoming.", inline=True)
-	embed.set_footer(text="Barry#0828", icon_url=ctx.message.author.avatar_url)
+	embed.set_author(name="#at-everyone", icon_url="https://discordemoji.com/assets/emoji/angeryping.gif")
+	embed.add_field(name="Why ping pongs?", value="There is not always pinging `@everyone`, we only ping `@everyone` if we need to.")
+	embed.set_footer(text="Ping Pong?", icon_url=ctx.message.author.avatar_url)
 	await bot.say(embed=embed)
 	
 
