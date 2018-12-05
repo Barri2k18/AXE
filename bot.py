@@ -86,8 +86,9 @@ async def rules(ctx):
 async def test123(ctx):
 	embed = discord.Embed(title=" ")
 	embed.set_author(name="Commands", icon_url="https://discordemoji.com/assets/emoji/angeryping.gif")
-	embed.add_field(name="General", value=" ")
-	embed.set_footer(text="Ping Pong?", icon_url=ctx.message.author.avatar_url)
+	embed.add_field(name="General", value="`avatar`, `userinfo`, `serverinfo`, `poll`, `info`", inline=True)
+	embed.add_field(name="Moderation", value="`kick`, `ban`, `mute`, `unmute`", inline=True)
+	embed.set_footer(text="x", icon_url=ctx.message.author.avatar_url)
 	await bot.say(embed=embed)
 	
 
