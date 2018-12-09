@@ -5,3 +5,5 @@ asyncio
 Status
 
 PyNaCl
+youtube-dl
+
