@@ -76,14 +76,10 @@ server1 = bot.get_server(472829296940154901)
 
 async def status_task():
     while True:
-        await bot.change_presence(game=discord.Game(name='for axhelp', type=1))
+        await bot.change_presence(game=discord.Game(name='LOUNGΞ', type=1))
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name='with '+str(len(set(bot.get_all_members())))+' users', type=1))
         await asyncio.sleep(3)
-        await bot.change_presence(game=discord.Game(name='Begone', type=1))
-        await asyncio.sleep(3)
-        await bot.change_presence(game=discord.Game(name='Thot', type=1))
-        await asyncio.sleep(1)
      
          # ------------ Oofy  
 	
